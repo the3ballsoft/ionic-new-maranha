@@ -1,0 +1,27 @@
+<ion-view view-title="Ayre Movil" hide-nav-bar="true">
+    <ion-content class="Login-cover" overflow-scroll="true">
+    <div class="Login-logoContent slide-in">
+        <img ng-src="assets/img/logo.png">
+    </div>
+    <div class="Login-bodyForm animation-body">
+        <form novalidate name="loginform">
+            <label class="item Login-itemInput">
+                <input type="number" ng-model="loginData.cod" name="email" required="" placeholder="Codigo">
+            </label>
+            <label class="item Login-itemInput" style="margin-top: 25px;">
+                <input type="password" ng-model="loginData.password" required="" placeholder="Contrasena">
+            </label>
+            <br>
+            <div class="Login-btnWrp">
+              <button class="button" ng-disabled="loginform.$invalid" type="submit" 
+                ng-click="login()" >
+                Ingresar
+              </button>
+            </div>
+        </form>
+    </div>
+    <div class="Login-footer">
+      The3ballsoft ®
+    </div>
+  </ion-content>
+</ion-view>

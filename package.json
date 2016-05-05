@@ -1,0 +1,40 @@
+{
+  "name": "ionic-new-maranha",
+  "version": "1.1.1",
+  "description": "ionic-new-maranha: An Ionic project",
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "gulp-angular-filesort": "^1.0.4",
+    "gulp-cached": "^1.0.1",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-ng-html2js": "^0.2.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.2.4",
+    "gulp-uglify": "^1.0.1",
+    "jssha": "=1.6.0",
+    "main-bower-files": "^2.1.0",
+    "ng-annotate": "^1.0.2",
+    "shelljs": "^0.7.0"
+  },
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard",
+    "cordova-plugin-splashscreen"
+  ],
+  "cordovaPlatforms": [
+    "android",
+    "ios"
+  ]
+}

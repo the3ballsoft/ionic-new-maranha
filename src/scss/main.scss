@@ -1,0 +1,35 @@
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../assets/fonts/" !default;
+
+
+/* * * Ayre mobile * * */
+/* > Naming convention https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md 
+ * Guide: 
+ *    u-utilityName
+ *    ComponentName
+ *    ComponentName--modifierName
+ *    ComponentName-descendentName
+ *    ComponentName.is-stateOfComponent
+ */
+
+//global vars
+@import "partials/variables";
+
+// utilities
+@import "partials/utils";
+
+// Include all of Ionic
+@import "../../vendor/ionic/scss/ionic";
+
+// directives 
+@import "../js/layouts/helperDirectives";
+
+//login component
+@import "../js/auth/login";
+
+//Menu component
+@import "../js/layouts/menu";
+
+//Menu Profile 
+/*@import "../js/profile/profile";*/

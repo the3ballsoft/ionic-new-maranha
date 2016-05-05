@@ -1,0 +1,54 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" width="200" class="menu">
+    <ion-content>
+      <div align="center" class="padding menu-avatar">
+        <a href="#/app/profile" menu-close>
+              <img ng-src="http://graph.facebook.com/{{ user.id_facebook }}/picture?type=large">
+              <p class="name">Jhon Doe</p>
+              <a href="javascript:void(0);">Ir a Perfil</a>
+        </a>
+      </div>
+      <ion-list>
+        <ion-item menu-close href="#/app/news">
+        <i class="ion-arrow-graph-up-right"></i>
+          Noticias 
+        </ion-item>
+        <ion-item menu-close href="#/app/schedule">
+        <i class="ion-clock"></i>
+          Horario
+        </ion-item>
+        <ion-item menu-close href="#/app/scores">
+        <i class="icon ion-clipboard"></i>
+         Notas 
+        </ion-item>
+        <ion-item menu-close href="#/app/history">
+        <i class="icon ion-calendar"></i>
+         Historial 
+        </ion-item>
+        <ion-item menu-close href="#/app/tools">
+        <i class="icon ion-settings"></i>
+         Herramientas 
+        </ion-item>
+      </ion-list>
+    </ion-content>
+        <ion-item class="exit-item" ng-click="loguout()" menu-close>
+          <span>
+            <i class="icon material-icons">exit_to_app</i> 
+            <span class="text-icon"> Salir</span>
+          </span>  
+        </ion-item>
+  </ion-side-menu>
+</ion-side-menus>

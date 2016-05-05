@@ -1,0 +1,8 @@
+[
+    "vendor/ionic/js/ionic.bundle.min.js",
+    "vendor/angular-bindonce/bindonce.min.js",
+    "vendor/ngCordova/dist/ng-cordova.min.js",
+    "vendor/moment/min/moment.min.js",
+    "vendor/moment/locale/es.js",
+    "vendor/angular-moment/angular-moment.min.js"
+]

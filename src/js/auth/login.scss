@@ -1,0 +1,124 @@
+/*
+ *main
+ */
+.Login-cover {
+    background: url(../assets/img/background.png) center; 
+    background-size: cover;
+    .scroll  {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: flex-start;
+      align-items: center;
+      .Login-logoContent {
+        flex: 1 0 auto;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        img {
+          height: 160px;
+        }
+      }
+      .Login-bodyForm {
+        flex: 1 0 auto;
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+      }
+      .Login-footer {
+        flex: .5 0 auto;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        color: #BFBFBF;
+        font-size: 14px;
+      }
+    }
+}
+
+.Login-itemInput {
+    margin: 10px 40px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    input {
+      padding: 0;
+      color: white;
+      font-size: 16px;
+      background: transparent;
+      border-bottom: 1px solid rgba(white, 0.43);
+      &:focus {
+        border-bottom: 2px solid $gold;
+      }
+    }
+}
+
+ /*
+  *login button
+  */
+.Login-btnWrp {
+  text-align: center;
+  button {
+    background: $gold;
+    border: none;
+    color: white;
+    width: 170px;
+    &.activated {
+      background: darken($gold, 2%);
+      color: darken(white, 2%);
+    }
+    &[disabled] {
+      opacity: 0.6;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+/*
+ *Animations
+ */
+
+@-webkit-keyframes fadeInAndtranslate {
+  0% {
+    -webkit-transform: translate3d(0,75%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0,0, 0);
+  }
+}
+.slide-in {
+  -webkit-transform: translate3d(0,75%, 0);
+  -webkit-animation: fadeInAndtranslate ease-out 1; 
+  animation: fadeInAndtranslate ease-out 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-delay: $splashDuration+0ms;
+  animation-delay: $splashDuration+0ms;
+}
+
+
+@-webkit-keyframes showIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animation-body {
+  opacity: 0;
+   -webkit-animation: showIn ease-in 1; 
+  animation: showIn ease-in 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-delay: $splashDuration+900ms;
+  animation-delay: $splashDuration+900ms;
+}

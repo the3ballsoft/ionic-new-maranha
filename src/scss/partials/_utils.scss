@@ -1,0 +1,160 @@
+.text-centered {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.blue-title {
+    color: $blue;
+    font-weight: 400;
+}
+.text-muted {
+    opacity: 0.5;
+}
+.margin-top-m {
+    margin-top: 10px !important;
+}
+.pull-right {
+    float: right;
+}
+/*
+ *Number fonts
+ */
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../assets/fonts/OpenSansRegular/OpenSansRegular.eot');
+    src: url('../assets/fonts/OpenSansRegular/OpenSansRegular.eot') format('embedded-opentype'),
+         url('../assets/fonts/OpenSansRegular/OpenSansRegular.woff2') format('woff2'),
+         url('../assets/fonts/OpenSansRegular/OpenSansRegular.woff') format('woff'),
+         url('../assets/fonts/OpenSansRegular/OpenSansRegular.ttf') format('truetype'),
+         url('../assets/fonts/OpenSansRegular/OpenSansRegular.svg#Consolas') format('svg');
+}
+
+$font-family-sans-serif:          "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !default;
+
+$font-family-base: 'OpenSansRegular' !default;
+/*.num {*/
+  /*font-family: "Consolas";*/
+/*}*/
+.ionic-font {
+  font-family: $font-family-sans-serif;
+}
+/*
+ *Material icons
+ */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'), 
+       url('../assets/fonts/material-fonts.wff2') format('woff2'),
+       url('../assets/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('../assets/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+
+  &.green {
+    background-color: $green;
+  }
+  &.blue {
+    background-color: $blue;
+  }
+  &.yellow {
+    background-color: $yellow;
+  }
+  &.red {
+    background-color: $red;
+  }
+}
+/*
+ *Loader android stuff
+ */
+
+.loader {
+  position: relative;
+  margin: 0px auto;
+  width: 100px;
+  &:before {
+    content:'';
+    display: block;
+    padding-top: 100%;
+  }
+  .circular {
+    animation: rotate 2s linear infinite;
+    height: 100%;
+    transform-origin: center center;
+    width: 100%;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+  }
+
+  .path {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+    animation: 
+    dash 1.5s ease-in-out infinite,
+    color 6s ease-in-out infinite
+    ;
+    stroke-linecap: round;
+  }
+}
+
+@keyframes rotate{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes dash{
+  0%{
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35px;
+  }
+  100%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124px;
+  }
+}
+@keyframes color{
+  100%, 0%{
+    stroke: $red;
+  }
+  40%{
+    stroke: $blue;
+  }
+  66%{
+    stroke: $green;
+  }
+  80%, 90%{
+    stroke: $yellow;
+  }
+}
