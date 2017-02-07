@@ -14,4 +14,9 @@
     
   - ionic serve || ionic run ios|android 
 
+# helpers
+    > generate folder component ready to go
+
+    - gulp component --name auth
+
 
